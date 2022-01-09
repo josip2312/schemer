@@ -3,7 +3,7 @@ import { isDark, toggleDark } from '@/composables/darkMode';
 </script>
 
 <template>
-  <button class="btn dark-mode" @click="toggleDark">
+  <button class="btn dark-mode" @click="toggleDark()">
     Toggle {{ isDark ? 'light' : 'dark' }} mode
   </button>
 </template>
