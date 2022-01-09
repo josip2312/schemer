@@ -6,6 +6,7 @@ module.exports = {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     withDefaults: 'readonly',
+    Prism: 'readonly',
   },
   extends: [
     '@vue/typescript/recommended',
