@@ -6,21 +6,9 @@
 
   --responsive-padding: clamp(1rem, 5vw, 3.5rem);
 
-  --c-brand: hsl(
-    var(--brand-hue),
-    var(--brand-saturation),
-    var(--brand-lightness)
-  );
-  --c-brand-lighter: hsl(
-    var(--brand-hue),
-    var(--brand-saturation),
-    calc(var(--brand-lightness) + 5%)
-  );
-  --c-brand-darker: hsl(
-    var(--brand-hue),
-    var(--brand-saturation),
-    calc(var(--brand-lightness) - 5%)
-  );
+  --c-brand: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-lightness));
+  --c-brand-lighter: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-lightness) + 5%));
+  --c-brand-darker: hsl(var(--brand-hue), var(--brand-saturation), calc(var(--brand-lightness) - 5%));
 
   --c-bg: hsl(var(--brand-hue), 6%, 96.5%);
   --c-bg-accent-1: hsl(var(--brand-hue), 6%, 94%);
@@ -41,11 +29,7 @@
   --overlay-light: hsla(0, 0%, 0%, 0.15);
 
   /* ---------------- DARK -------------------- */
-  --c-brand-dark: hsl(
-    var(--brand-hue),
-    calc(var(--brand-saturation) / 2),
-    calc(var(--brand-lightness) / 1.5)
-  );
+  --c-brand-dark: hsl(var(--brand-hue), calc(var(--brand-saturation) / 2), calc(var(--brand-lightness) / 1.5));
   --c-brand-lighter-dark: hsl(
     var(--brand-hue),
     calc(var(--brand-saturation) / 2),
@@ -69,11 +53,7 @@
   --c-text-2-dark: hsl(var(--brand-hue), 12.5%, 85%);
   --c-text-3-dark: hsl(var(--brand-hue), 12.5%, 75%);
 
-  --c-text-secondary-1-dark: hsl(
-    var(--brand-hue),
-    var(--brand-saturation),
-    10%
-  );
+  --c-text-secondary-1-dark: hsl(var(--brand-hue), var(--brand-saturation), 10%);
   --c-text-secondary-2-dark: hsl(var(--brand-hue), 12.5%, 30%);
   --c-text-secondary-3-dark: hsl(var(--brand-hue), 12.5%, 37.5%);
 

@@ -13,9 +13,8 @@ body {
   background: var(--bg);
   overflow-x: hidden;
   line-height: 1.6;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,4 +27,15 @@ body {
   cursor: pointer;
   background: var(--bg-accent-2);
   border: 0;
+}
+
+.copied {
+  position: fixed;
+  z-index: 100;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--fg);
+  padding: 0.5em 1.5em;
+  color: var(--text-secondary-1);
 }

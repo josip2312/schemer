@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, reactive, watch } from 'vue';
+import { useClipboard } from '@vueuse/core';
 import { isDark } from '@/composables/darkMode';
 import colors from '@/data/variableColors';
 
@@ -18,7 +19,9 @@ watch(isDark, () => {
   clear();
 });
 
-const generatedColors = ref({});
+const { copy, copied } = useClipboard({ copiedDuring: 2500 });
+
+const generatedColors = ref('');
 
 const isGenerated = computed(() => {
   return Object.keys(generatedColors.value).length > 0;
@@ -73,11 +76,15 @@ const clear = () => {
     <template v-if="isGenerated">
       <button class="btn clear" @click="clear">Clear</button>
       <pre class="snippet">
-      <code class="language-css">
-        {{ generatedColors }}
-      </code>
+        <button class="btn copy" @click="copy(generatedColors)">Copy</button>
+        <code class="language-css">
+          {{ generatedColors }}
+        </code>
     </pre>
     </template>
+    <AppTransition>
+      <div v-if="copied" class="copied">Copied!</div>
+    </AppTransition>
   </div>
 </template>
 
@@ -94,6 +101,13 @@ const clear = () => {
 }
 
 .snippet {
+  position: relative;
   background-color: var(--bg-accent-1);
+
+  .copy {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
 }
 </style>

@@ -110,17 +110,6 @@ const copyColor = (e: any) => {
   margin: 0 auto;
   padding: 2.5rem 0;
 
-  .copied {
-    position: fixed;
-    z-index: 100;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--fg);
-    padding: 0.5em 1.5em;
-    color: var(--text-secondary-1);
-  }
-
   .brand {
     display: flex;
     margin-bottom: 1.5rem;
